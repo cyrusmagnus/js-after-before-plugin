@@ -1,0 +1,59 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+
+body
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100vw
+  height: 100vh
+
+
+.slider
+  width: 1024px
+  height: 512px
+  position: relative
+  background-color: #111
+
+  &__before
+    width: 512px
+    height: 512px
+    position: absolute
+    z-index: 2
+    background: url('/img/before.jpg') no-repeat center center fixed
+    background-size: cover
+
+  &__resize
+    width: 5px
+    position: absolute
+    right: 0
+    top: 0
+    height: 100%
+    background-color: #111
+    cursor: col-resize
+
+    &::before
+      content: '<'
+      position: absolute
+      font-size: 30px
+      font-weight: 900
+      top: 50%
+      right: 5px
+
+    &::after
+      content: '>'
+      position: absolute
+      font-size: 30px
+      font-weight: 900
+      top: 50%
+      left: 5px 
+
+  &__after
+    width: 1024px
+    height: 512px
+    position: absolute
+    background: url('/img/after.jpg') no-repeat center center fixed
+    background-size: cover
